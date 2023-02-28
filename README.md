@@ -26,6 +26,12 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+`.map` iterates over an array and returns a new array. As it iterates, it can perform functionality on each item of the array. The items will then be returned in the new array. It is frequently used to "do something" to each item, like multiply each item by 2 and return the resulting items in the new array.
+
+`.filter` iterates over an array, passes each item through a boolean test, and returns a new array with the items that passed the test. It is frequently used for filtering an array of elements by a specific conditions to remove extraneous data.
+
+`.reduce` iterates over an array and returns a single value. The syntax for `.reduce` is different from `.filter` and .`map` because it takes a reducer function with two values: an accumulator and a current value. The accumulator is what gets updated and returned from the reducer function. It is most frequently used to reshape large sets of data into a single value (e.g., averages or sums).
+
 2. Explain the difference between a callback and a higher order function.
 
 3. Explain what a closure is.

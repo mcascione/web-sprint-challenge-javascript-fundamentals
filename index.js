@@ -17,9 +17,7 @@ function myFunction() {
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
-
+// nestedFunction is able to access the constant internal through closure. When the constant internal is console logged in nestedFunction, Java Script must reach outside of nestedFunctions's scope into it's lexical scope to find what value the constant internal is assigned to. Because nestedFunction's scope is within myFunction's outer scope, nestedFunction has access to all the constants or variables from myFunction through nestedFunction's lexical scope. 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
