@@ -34,11 +34,25 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. Explain the difference between a callback and a higher order function.
 
+A higher order function is a function that receives a callback function as an argument or returns a function. Whereas, a callback function gets passed into a higher order function. 
+
 3. Explain what a closure is.
+
+A closure happens when information must be accessed that is outside of the current block or function scope. Through closure, Javascript can find this information in the lexical scope, or the context around function or block that has memory from where the information originated. The information in the lexical scope could be the value of a variable that was declared within an external function. Closure and scope allow functional programs to have complexity. Without closure, Javascript would not have access to information bound within an exterior function's scope.
 
 4. Describe the four principles of the 'this' keyword.
 
+a. Window/Global Binding: 'this' has no particular context and is looking for meaning within the global context (with node) or the window (with the browser). 
+
+b. Implicit Binding: 'this' within an object refers to the context that was set before the '.' (dot) when a method is called. For example, teacher.teach() will implicitly bind the object teacher to any '.this' keyword used in the method of teach().
+
+c. Explicit Binding: A function is given explicit directions for where to look for the context for "this". Explicit Binding is accomplished through the ".call", ".apply" or ".bind" method. ".call" and ".apply" will immediately invoke the function and pass in arguments either one by one with ".call" or in an array with ".apply". The ".bind" method does not immediately invoke the function, but returns a new function with ".this" bound to the object that can be called later.  
+
+d. New Binding: This approach creates a copy of a new object from a starting object. The starting object feeds values into the new object when the function is invoked with the "new" keyword. The "this" inside of the constructor function refers to the specific instance of the starting object that was returned and created through the use of the "new" keyword.
+
 5. Why do we need super() in an extended class?
+
+Super() replaces the use of the Object.create syntax and passes any attributes of the child back up to the parent object's constructor. It enables the parent object's constructor to access the properties and methods of the child.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
