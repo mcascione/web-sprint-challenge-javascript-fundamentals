@@ -196,10 +196,10 @@ function greeting(firstName, lastName){
 - Instances of CuboidMaker should initialize `length`, `width` and `height` properties
 */
 
-function CuboidMaker(cuboid){
-  this.length = cuboid.length;
-  this.width = cuboid.width;
-  this.height = cuboid.height;
+function CuboidMaker(props){
+  this.length = props.length;
+  this.width = props.width;
+  this.height = props.height;
 }
 
 
@@ -237,10 +237,20 @@ const cuboid = new CuboidMaker({length: 4, width: 5, height: 5});
 //Using CuboidMakerTwo, take your prototypes from above and refactor into class syntax. Then, create an object called cuboidTwo that uses the new keyword to use our CuboidMakerTwo class.
  
 class CuboidMakerTwo{
-
+  constructor(props){
+    this.length = props.length;
+    this.width = props.width;
+    this.height = props.height;
+  }
+  volume(){
+    return this.length*this.width*this.height;
+  }
+  surfaceArea(){
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
 }
 
-
+const cuboidTwo = new CuboidMakerTwo({length: 4, width: 5, height: 5});
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
